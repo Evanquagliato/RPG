@@ -6,7 +6,7 @@ namespace RPG
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to this wonderful RPG");
         }
     }
 }
