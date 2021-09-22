@@ -16,6 +16,8 @@ namespace RPG
             Enemy enemy = new Enemy();
 
             System.Console.WriteLine("Player class is: {0} and name is {1}", player.PlayerClass, player.Name);
+
+            // Simulate combat for testing
             while (player.Alive == true && enemy.Alive == true)
             {
                 player.CombatRound(enemy.Attack);

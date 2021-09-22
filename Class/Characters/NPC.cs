@@ -6,11 +6,5 @@ namespace RPG.Class.Characters
         {
 
         }
-
-        public override int CombatRound()
-        {
-
-            return 0;
-        }
     }
 }
