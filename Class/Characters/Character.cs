@@ -1,4 +1,4 @@
-namespace RPG.Class
+namespace RPG.Class.Characters
 {
     public abstract class Character
     {

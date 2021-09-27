@@ -1,5 +1,7 @@
 ﻿using System;
 using RPG.Class.Characters;
+using RPG.Class.Rooms;
+using RPG.Class.Engine;
 
 namespace RPG
 {
@@ -17,9 +19,13 @@ namespace RPG
 
             System.Console.WriteLine("Player class is: {0} and name is {1}", player.PlayerClass, player.Name);
 
+
+            Room[,] mapArray = Engine.MapCreator();
+
             // Simulate combat for testing
             while (player.Alive == true && enemy.Alive == true)
             {
+                Engine.Render(mapArray);
                 player.CombatRound(enemy.Attack);
                 enemy.CombatRound(player.Attack);
 
