@@ -10,6 +10,7 @@ namespace RPG
         static void Main(string[] args)
         {
 
+            // Testing generating the characteer
             Console.WriteLine("Welcome to this wonderful RPG");
             System.Console.WriteLine("Please select a class!\n1 for Fighter\n2 for Mage\n3 for Tank");
             int classNumber = Int32.Parse(Console.ReadLine());
@@ -19,7 +20,7 @@ namespace RPG
 
             System.Console.WriteLine("Player class is: {0} and name is {1}", player.PlayerClass, player.Name);
 
-
+            // Generate the initial map
             Room[,] mapArray = Startup.MapCreator();
 
             // Simulate combat for testing
