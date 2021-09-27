@@ -14,6 +14,19 @@ namespace RPG.Class.Rooms
             this.RoomSymbol = "!";
         }
 
+        public void DrawRoom()
+        {
+            if (PlayerLocation)
+            {
+                System.Console.Write("P");
+            }
+            else
+            {
+                System.Console.Write(RoomSymbol);
+            }
+
+        }
+
         public void PlayerEntered()
         {
             this.PlayerLocation = true;

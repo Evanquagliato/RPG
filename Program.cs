@@ -20,7 +20,7 @@ namespace RPG
             System.Console.WriteLine("Player class is: {0} and name is {1}", player.PlayerClass, player.Name);
 
 
-            Room[,] mapArray = Engine.MapCreator();
+            Room[,] mapArray = Startup.MapCreator();
 
             // Simulate combat for testing
             while (player.Alive == true && enemy.Alive == true)
