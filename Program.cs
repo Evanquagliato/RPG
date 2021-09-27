@@ -2,6 +2,7 @@
 using RPG.Class.Characters;
 using RPG.Class.Rooms;
 using RPG.Class.Engine;
+using System.Linq;
 
 namespace RPG
 {
@@ -21,17 +22,24 @@ namespace RPG
             System.Console.WriteLine("Player class is: {0} and name is {1}", player.PlayerClass, player.Name);
 
             // Generate the initial map
-            Room[,] mapArray = Startup.MapCreator();
 
-            // Simulate combat for testing
+            Room[,] mapArray = Startup.MapCreator();
+            mapArray[player.Location[0], player.Location[1]].PlayerEntered();
+            // Game Loop
             while (player.Alive == true && enemy.Alive == true)
             {
-                Engine.Render(mapArray);
-                player.CombatRound(enemy.Attack);
-                enemy.CombatRound(player.Attack);
 
-                System.Console.WriteLine("Player HP: {0} | Enemy HP: {1}", player.Health, enemy.Health);
-                System.Console.ReadLine();
+                Engine.Render(mapArray);
+                // Update the room the player was in as a room the player isn't in
+                mapArray[player.Location[0], player.Location[1]].PlayerLeft();
+
+                // Movement input 
+                player.LocationUpdate(Movement.PlayerMovement());
+
+                // Update the map for the player entering a new room
+                mapArray[player.Location[0], player.Location[1]].PlayerEntered();
+
+
             }
         }
     }

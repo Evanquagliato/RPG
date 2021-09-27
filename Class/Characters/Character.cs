@@ -9,6 +9,8 @@ namespace RPG.Class.Characters
         public int Attack { get; set; } = 0;
         public int Defense { get; set; } = 0;
         public bool Alive { get; set; } = true;
+
+
         // Player, Enemy, Vendor, or NPC
         public string CharacterType { get; set; }
 
