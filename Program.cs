@@ -12,14 +12,9 @@ namespace RPG
         {
 
             // Testing generating the characteer
-            Console.WriteLine("Welcome to this wonderful RPG");
-            System.Console.WriteLine("Please select a class!\n1 for Fighter\n2 for Mage\n3 for Tank");
-            int classNumber = Int32.Parse(Console.ReadLine());
-            System.Console.Write("Now enter a name!");
-            Player player = new Player(Console.ReadLine(), classNumber);
+            System.Console.WriteLine("Enter a name");
+            Player player = new Player(Console.ReadLine(), 1);
             Enemy enemy = new Enemy();
-
-            System.Console.WriteLine("Player class is: {0} and name is {1}", player.PlayerClass, player.Name);
 
             // Generate the initial map
 
@@ -29,7 +24,7 @@ namespace RPG
             while (player.Alive == true && enemy.Alive == true)
             {
 
-                Engine.Render(mapArray);
+                Engine.Render(mapArray, player);
                 // Update the room the player was in as a room the player isn't in
                 mapArray[player.Location[0], player.Location[1]].PlayerLeft();
 

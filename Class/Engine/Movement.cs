@@ -5,6 +5,7 @@ namespace RPG.Class.Engine
 {
     public static class Movement
     {
+        // Looks for the player's key press, then performs the movement
         public static int[] PlayerMovement()
         {
 
@@ -29,6 +30,7 @@ namespace RPG.Class.Engine
 
         }
 
+        // Separating movement into methods so we can add onto them in the future easily
         private static int[] MoveUp()
         {
             return new[] { -1, 0 };

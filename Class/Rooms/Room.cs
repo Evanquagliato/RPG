@@ -14,6 +14,7 @@ namespace RPG.Class.Rooms
             this.RoomSymbol = "!";
         }
 
+        // Draw the room with it's symbol. If it sees the player, draw a P instead
         public void DrawRoom()
         {
             if (PlayerLocation)
@@ -27,11 +28,13 @@ namespace RPG.Class.Rooms
 
         }
 
+        // Runs when a player's coords match the object
         public void PlayerEntered()
         {
             this.PlayerLocation = true;
         }
 
+        // Runs when a players coords no longer match the object
         public void PlayerLeft()
         {
             this.PlayerLocation = false;
