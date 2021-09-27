@@ -5,7 +5,7 @@ namespace RPG.Class.Characters
         public Enemy()
         {
             Name = "Bob";
-            Health = 10;
+            Health = 1;
             Attack = 1;
             Defense = 0;
             CharacterType = "Enemy";

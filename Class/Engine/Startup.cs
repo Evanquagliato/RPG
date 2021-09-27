@@ -9,6 +9,7 @@ namespace RPG.Class.Engine
         // Creates the initial map object 
         public static Room[,] MapCreator()
         {
+            Console.CursorVisible = false;
             Room[,] mapArray = new Room[5, 10];
             for (int i = 0; i < mapArray.GetLength(0); i++)
             {
