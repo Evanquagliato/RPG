@@ -3,6 +3,7 @@ namespace RPG.Class.Characters
     public class Player : Character
     {
         public string PlayerClass { get; set; }
+        public int[] Location { get; set; } = new int[] { 0, 0 };
         public Player()
         {
             Name = "Chad";
@@ -43,6 +44,12 @@ namespace RPG.Class.Characters
 
             CharacterType = "Player";
             this.Name = name;
+        }
+
+        public void LocationUpdate(int[] coords)
+        {
+            Location[0] += coords[0];
+            Location[1] += coords[1];
         }
     }
 }

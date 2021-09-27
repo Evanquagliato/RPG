@@ -5,7 +5,7 @@ namespace RPG.Class.Rooms
     public abstract class Room
     {
         public Character RoomCharacter { get; set; }
-        public bool PlayerLocation { get; set; } = false;
+        private bool PlayerLocation { get; set; } = false;
         public string RoomSymbol { get; set; }
 
         public Room()

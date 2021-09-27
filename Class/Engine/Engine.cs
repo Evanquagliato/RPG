@@ -18,6 +18,7 @@ namespace RPG.Class.Engine
                 }
                 System.Console.WriteLine("");
             }
+            Console.Clear();
         }
 
 
