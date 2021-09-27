@@ -24,7 +24,7 @@ namespace RPG.Class.Engine
             System.Console.WriteLine("Player Name: " + player.Name);
             System.Console.WriteLine("Player Health: " + player.Health);
         }
-
+        // WIP combat processor
         public static void Combat(Player player, Enemy enemy)
         {
             bool combat = true;
